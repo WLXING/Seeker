@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.ui.WordEditActivity">
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="@color/toolbar_color">
+
+        <TextView
+            android:id="@+id/wordEditActivity_back"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentStart="true"
+            android:layout_margin="10dp"
+            android:text="@string/edit_word_goback"
+            android:textSize="20sp"
+            android:textColor="@color/white" />
+
+        <TextView
+            android:id="@+id/wordEditActivity_save"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentEnd="true"
+            android:layout_margin="10dp"
+            android:textSize="20sp"
+            android:text="@string/edit_word_save"
+            android:textColor="@color/white" />
+    </RelativeLayout>
+    <EditText
+        android:layout_marginTop="120dp"
+        android:layout_centerHorizontal="true"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/wordEditActivity_headword"
+        android:padding="4dp"
+        android:theme="@style/seeker_editText_style"
+        android:singleLine="true"
+        android:textCursorDrawable="@drawable/seeker_edit_cursor_color"/>
+    <EditText
+        android:layout_marginTop="5dp"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/wordEditActivity_headword"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/wordEditActivity_phonetic"
+        android:padding="4dp"
+        android:theme="@style/seeker_editText_style"
+        android:singleLine="true"
+        android:textCursorDrawable="@drawable/seeker_edit_cursor_color"/>
+    <EditText
+        android:layout_marginTop="5dp"
+        android:layout_centerHorizontal="true"
+        android:layout_below="@id/wordEditActivity_phonetic"
+        android:layout_width="250dp"
+        android:layout_height="wrap_content"
+        android:id="@+id/wordEditActivity_quickdefinition"
+        android:padding="4dp"
+        android:theme="@style/seeker_editText_style"
+        android:textCursorDrawable="@drawable/seeker_edit_cursor_color" />
+</RelativeLayout>

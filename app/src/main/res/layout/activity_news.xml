@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.ui.NewsActivity">
+
+<ImageView
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:id="@+id/newsActivity_back"
+    android:src="@drawable/seeker_icon_back"/>
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/newsActivity_items"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/newsActivity_back"></android.support.v7.widget.RecyclerView>
+<android.support.v4.widget.SwipeRefreshLayout
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:id="@+id/newsActivity_swipRefresh"
+    android:layout_below="@id/newsActivity_items">
+    <ListView
+        android:id="@+id/newsActivity_title"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:divider="@color/white"
+        android:dividerHeight="25dp"
+        ></ListView>
+</android.support.v4.widget.SwipeRefreshLayout>
+
+
+</RelativeLayout>

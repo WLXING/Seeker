@@ -1,0 +1,224 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <RadioGroup
+        android:id="@+id/reciteFragment_radioGroup"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:layout_centerHorizontal="true">
+
+        <RadioButton
+            android:id="@+id/reciteFragment_reciteRadiobutton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="55dp"
+            android:layout_marginTop="15dp"
+            android:text="@string/recite_word_recite"/>
+
+        <RadioButton
+            android:id="@+id/reciteFragment_testRadiobutton"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:layout_marginTop="15dp"
+            android:text="@string/recite_word_test"/>
+
+    </RadioGroup>
+
+    <Spinner
+        android:id="@+id/reciteFragment_spinner"
+        android:layout_width="wrap_content"
+        android:layout_height="40dp"
+        android:layout_alignEnd="@+id/reciteFragment_radioGroup"
+        android:layout_alignParentTop="true"
+        android:layout_marginTop="40dp"
+        android:theme="@style/reciteSpinner"></Spinner>
+
+    <RelativeLayout
+        android:id="@+id/reciteFragment_displayAera"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/reciteFragment_spinner"
+        android:layout_marginTop="30dp"
+        android:background="@color/colorBlue">
+
+        <EditText
+            android:id="@+id/reciteFragment_headword"
+            android:layout_width="250dp"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:textAlignment="center"/>
+
+        <EditText
+            android:id="@+id/reciteFragment_phonetic"
+            android:layout_width="250dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/reciteFragment_headword"
+            android:layout_centerHorizontal="true"
+            android:textAlignment="center"/>
+
+        <EditText
+            android:id="@+id/reciteFragment_quickdefinition"
+            android:layout_width="250dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/reciteFragment_phonetic"
+            android:layout_centerHorizontal="true"
+            android:textAlignment="center"/>
+    </RelativeLayout>
+
+    <Button
+        android:id="@+id/reciteFragment_lastOne"
+        android:layout_width="wrap_content"
+        android:layout_height="30dp"
+        android:layout_below="@id/reciteFragment_displayAera"
+        android:layout_marginLeft="20dp"
+        android:layout_marginTop="30dp"
+        android:text="@string/recite_word_lastone"
+        style="?android:attr/borderlessButtonStyle"
+        android:background="@drawable/seeker_button_bg_selector3"/>
+
+    <Button
+        android:id="@+id/reciteFragment_answer"
+        android:layout_width="wrap_content"
+        android:layout_height="30dp"
+        android:layout_below="@id/reciteFragment_displayAera"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="30dp"
+        android:text="@string/recite_word_answer"
+        style="?android:attr/borderlessButtonStyle"
+        android:background="@drawable/seeker_button_bg_selector3"/>
+
+    <TextView
+        android:id="@+id/reciteFragment_yourNowLocationText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/reciteFragment_lastOne"
+        android:layout_marginLeft="10dp"
+        android:layout_marginTop="10dp"
+        android:text="当前所在第" />
+
+    <TextView
+        android:id="@+id/reciteFragment_nowLocation"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/reciteFragment_lastOne"
+        android:layout_marginLeft="2dp"
+        android:layout_marginTop="10dp"
+        android:layout_toRightOf="@id/reciteFragment_yourNowLocationText"
+        android:text="0" />
+
+    <TextView
+        android:id="@+id/reciteFragment_nowLocationText_unit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/reciteFragment_lastOne"
+        android:layout_marginLeft="2dp"
+        android:layout_marginTop="10dp"
+        android:layout_toRightOf="@id/reciteFragment_nowLocation"
+        android:text="个,共" />
+
+    <TextView
+        android:id="@+id/reciteFragment_total"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/reciteFragment_lastOne"
+        android:layout_marginLeft="2dp"
+        android:layout_marginTop="10dp"
+        android:layout_toRightOf="@id/reciteFragment_nowLocationText_unit"
+        android:text="0" />
+
+    <TextView
+        android:id="@+id/reciteFragment_jumpToText"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/reciteFragment_lastOne"
+        android:layout_marginLeft="2dp"
+        android:layout_marginTop="10dp"
+        android:layout_toRightOf="@id/reciteFragment_total"
+        android:text="个，跳至第" />
+
+    <EditText
+        android:id="@+id/reciteFragment_jumpToLocation"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignBaseline="@+id/reciteFragment_jumpToTextUnit"
+        android:layout_alignBottom="@+id/reciteFragment_jumpToTextUnit"
+        android:layout_toEndOf="@+id/reciteFragment_jumpToText"
+        android:inputType="number"
+        android:textSize="15sp" />
+
+    <TextView
+        android:id="@+id/reciteFragment_jumpToTextUnit"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/reciteFragment_lastOne"
+        android:layout_marginLeft="2dp"
+        android:layout_marginTop="10dp"
+        android:layout_toRightOf="@id/reciteFragment_jumpToLocation"
+        android:text="个" />
+
+    <Button
+        android:id="@+id/reciteFragment_jumpOk"
+        android:layout_width="50dp"
+        android:layout_height="30dp"
+        android:layout_below="@id/reciteFragment_lastOne"
+        android:layout_marginLeft="25dp"
+        android:layout_marginTop="2dp"
+        android:layout_toRightOf="@id/reciteFragment_jumpToLocation"
+        android:text="确定"
+        android:textSize="15sp"
+        style="?android:attr/borderlessButtonStyle"
+        android:background="@drawable/seeker_button_bg_selector3"/>
+
+    <Button
+        android:id="@+id/reciteFragment_nextOne"
+        android:layout_width="wrap_content"
+        android:layout_height="30dp"
+        android:layout_alignParentEnd="true"
+        android:layout_below="@id/reciteFragment_displayAera"
+        android:layout_marginRight="20dp"
+        android:layout_marginTop="30dp"
+        android:text="@string/recite_word_nextone"
+        style="?android:attr/borderlessButtonStyle"
+        android:background="@drawable/seeker_button_bg_selector3"/>
+
+    <RelativeLayout
+        android:id="@+id/reciteFragment_AnswerDisplayAera"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/reciteFragment_jumpOk"
+        android:layout_marginTop="10dp">
+
+        <EditText
+            android:id="@+id/reciteFragment_answerHeadword"
+            android:layout_width="250dp"
+            android:layout_height="wrap_content"
+            android:layout_centerHorizontal="true"
+            android:layout_below="@id/reciteFragment_jumpToText"
+            android:visibility="invisible"
+            tools:ignore="NotSibling"
+            android:textAlignment="center"/>
+
+        <EditText
+            android:id="@+id/reciteFragment_answerPhonetic"
+            android:layout_width="250dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/reciteFragment_answerHeadword"
+            android:layout_centerHorizontal="true"
+            android:visibility="invisible"
+            android:textAlignment="center"/>
+
+        <EditText
+            android:id="@+id/reciteFragment_answerQuickdefinition"
+            android:layout_width="250dp"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/reciteFragment_answerPhonetic"
+            android:layout_centerHorizontal="true"
+            android:visibility="invisible"
+            android:textAlignment="center"/>
+    </RelativeLayout>
+</RelativeLayout>

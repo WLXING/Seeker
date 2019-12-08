@@ -1,0 +1,33 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+<group android:checkableBehavior="single">
+    <item
+        android:id="@+id/nav_left_headImg"
+        android:icon="@drawable/seeker_icon_head_portrait"
+        android:title="@string/nav_left_head_img" />
+    <item
+        android:id="@+id/nav_left_petname"
+        android:icon="@drawable/seeker_icon_head_portrait"
+        android:title="@string/nav_left_nav_left_petname" />
+    <item
+        android:id="@+id/nav_left_password"
+        android:icon="@drawable/seeker_icon_task"
+        android:title="@string/nav_left_password" />
+    <item
+        android:id="@+id/nav_left_personality"
+        android:icon="@drawable/seeker_icon_task"
+        android:title="@string/nav_left_personality" />
+    <item
+        android:id="@+id/nav_left_dayMode"
+        android:icon="@drawable/nav_mail"
+        android:title="@string/nav_left_open_whether" />
+    <item
+        android:id="@+id/nav_left_nightMode"
+        android:icon="@drawable/seeker_icon_task"
+        android:title="@string/nav_left_change_mode" />
+    <item
+        android:id="@+id/nav_left_exit"
+        android:icon="@drawable/seeker_icon_task"
+        android:title="退出登录" />
+</group>
+</menu>

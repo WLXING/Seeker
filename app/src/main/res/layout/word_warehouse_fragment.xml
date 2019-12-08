@@ -1,0 +1,47 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.example.seeker.MainActivity">
+
+
+    <android.support.v7.widget.SearchView
+        android:id="@+id/warehouse_fragment_searchview"
+        android:layout_width="250dp"
+        android:layout_marginLeft="15dp"
+        android:layout_height="wrap_content"
+        app:queryHint="请输入关键字"></android.support.v7.widget.SearchView>
+
+    <TextView
+        android:id="@+id/warehouse_fragment_refresh"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="刷新"
+        android:layout_alignParentEnd="true"
+        android:layout_marginRight="15dp"
+        android:layout_marginTop="13dp"/>
+
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/warehouse_fragment_recyclerView"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@id/warehouse_fragment_searchview"
+        app:layout_behavior="@string/appbar_scrolling_view_behavior"></android.support.v7.widget.RecyclerView>
+
+    <android.support.design.widget.FloatingActionButton
+        android:id="@+id/warehouse_fragment_floatingBar"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentEnd="true"
+        android:layout_margin="16dp"
+        android:layout_marginBottom="5dp"
+        android:layout_marginRight="5dp"
+        android:backgroundTint="#dd45d671"
+        android:src="@drawable/large_ic_compose"
+        app:rippleColor="#dd45d671" />
+
+
+</RelativeLayout>

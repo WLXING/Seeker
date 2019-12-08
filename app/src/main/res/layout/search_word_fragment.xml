@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <android.support.v7.widget.SearchView
+        android:id="@+id/wordActivity_word_search"
+        android:layout_width="230dp"
+        android:layout_height="wrap_content"
+        android:layout_marginLeft="35dp"
+        android:layout_marginTop="10dp"></android.support.v7.widget.SearchView>
+
+    <Button
+        android:layout_width="60dp"
+        android:layout_height="25dp"
+        android:id="@+id/wordActivity_word_search_commit"
+        android:layout_alignParentEnd="true"
+        android:layout_marginTop="22dp"
+        android:layout_marginRight="50dp"
+        android:background="@drawable/seeker_button_bg_selector2"
+        android:text="@string/search_word_button_text"/>
+    <RadioGroup
+        android:id="@+id/wordActivity_word_search_radioGroup"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/wordActivity_word_search"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="10dp"
+        android:orientation="horizontal">
+
+        <RadioButton
+            android:id="@+id/wordActivity_localSearch"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginRight="20dp"
+            android:text="本地搜索" />
+
+        <RadioButton
+            android:id="@+id/wordActivity_onlineSearch"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="20dp"
+            android:text="在线搜索" />
+    </RadioGroup>
+
+    <TextView
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/wordActivity_word_search_radioGroup"
+        android:text="@string/search_word_tip"
+        android:textSize="10sp"
+        android:id="@+id/wordActivity_word_search_pressText"
+        android:layout_centerHorizontal="true"
+        android:layout_marginTop="5dp"/>
+    <EditText
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:id="@+id/word_onlineSearch_result"
+        android:layout_centerHorizontal="true"
+        android:visibility="invisible"
+        android:textSize="15sp"
+        android:layout_below="@id/wordActivity_word_search_pressText"
+        android:hint="请在这里输入要翻译的文本，并点击搜索按钮"/>
+    <android.support.v7.widget.RecyclerView
+        android:id="@+id/wordActivity_searchResult_recyclerview"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_below="@id/word_onlineSearch_result"></android.support.v7.widget.RecyclerView>
+</RelativeLayout>

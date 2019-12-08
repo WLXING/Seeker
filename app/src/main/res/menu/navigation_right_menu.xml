@@ -1,0 +1,29 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android">
+<group android:checkableBehavior="single">
+    <item
+        android:id="@+id/nav_right_all"
+        android:icon="@drawable/nav_call"
+        android:title="@string/nav_right_all_notes" />
+    <item
+        android:id="@+id/nav_right_work"
+        android:icon="@drawable/seeker_icon_head_portrait"
+        android:title="@string/nav_right_work_notes" />
+    <item
+        android:id="@+id/nav_right_study"
+        android:icon="@drawable/nav_location"
+        android:title="@string/nav_right_study_notes" />
+    <item
+        android:id="@+id/nav_right_life"
+        android:icon="@drawable/nav_mail"
+        android:title="@string/nav_right_life_notes" />
+    <item
+    android:id="@+id/nav_right_nogroup"
+    android:icon="@drawable/nav_mail"
+    android:title="@string/nav_right_no_group_notes" />
+    <item
+        android:id="@+id/nav_right_nodo"
+        android:icon="@drawable/nav_call"
+        android:title="@string/nav_right_nodo_notes" />
+</group>
+</menu>

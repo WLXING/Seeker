@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<litepal>
+    <dbname value="seeker"></dbname>
+    <version value="14"></version>
+    <list>
+        <mapping class="com.example.bean.Note"></mapping>
+        <mapping class="com.example.bean.User"></mapping>
+        <mapping class="com.example.bean.Notebook" ></mapping>
+        <mapping class="com.example.bean.WordList"></mapping>
+        <mapping class="com.example.bean.MyWordList"></mapping>
+        <mapping class="com.example.bean.AllReciteWord"></mapping>
+        <mapping class="com.example.bean.Process"></mapping>
+    </list>
+</litepal>

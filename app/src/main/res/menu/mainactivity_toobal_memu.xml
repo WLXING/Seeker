@@ -1,0 +1,64 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    //菜单思路：能点开的就是菜单，菜单里面有多少选择就加多少个item,为了item单选就用group将其包裹起来并设置参数
+    //怎么理解升序降序：当前做的就是最大的，最重要的，比如时间，当前时间比以前的珍贵，所以最高最大，降序就是由
+    //高到低，由当前时间往后面排；id排序也是如此，刚创建的ID比以前的大
+    <item
+        android:id="@+id/mainactivity_search"
+        android:title="搜索框"
+        app:showAsAction="always"
+        app:actionViewClass="android.support.v7.widget.SearchView"
+        ></item>
+
+    <item
+        android:id="@+id/mainactivity_sor_cretetTime"
+        android:title="@string/activity_main_sort_by_date"
+        app:showAsAction="never">
+        <menu>
+            <group android:checkableBehavior="single">
+                <item
+                    android:id="@+id/mainactivity_cretetTime_desc"
+                    android:title="@string/activity_main_sort_new_to_old"
+                    app:showAsAction="never"></item>
+                <item
+                    android:id="@+id/mainactivity_createTime_asc"
+                    android:title="@string/activity_main_sort_old_to_new"
+                    app:showAsAction="never"></item>
+            </group>
+        </menu>
+    </item>
+    <item
+        android:id="@+id/mainactivity_sor_id"
+        android:title="@string/activity_main_sort_by_create"
+        app:showAsAction="never">
+        <menu>
+            <group android:checkableBehavior="single">
+                <item
+                    android:id="@+id/mainactivity_id_asc"
+                    android:title="@string/activity_main_sort_last_to_now"
+                    app:showAsAction="never"></item>
+                <item
+                    android:id="@+id/mainactivity_id_desc"
+                    android:title="@string/activity_main_sort_now_to_last"
+                    app:showAsAction="never"></item>
+            </group>
+        </menu>
+    </item>
+    <item
+        android:id="@+id/mainactivity_openGroup"
+        android:title="查看分组"
+        app:showAsAction="never"></item>
+    <item
+        android:id="@+id/mainactivity_listMode"
+        android:title="单列模式"
+        app:showAsAction="never"></item>
+    <item
+        android:id="@+id/mainactivity_staggeredMode"
+        android:title="瀑布流模式"
+        app:showAsAction="never"></item>
+    <item
+        android:id="@+id/mainactivity_clearAll"
+        android:title="一键清空"
+        app:showAsAction="never"></item>
+</menu>

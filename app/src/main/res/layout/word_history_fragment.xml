@@ -1,0 +1,38 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical">
+
+    <com.github.mikephil.charting.charts.BarChart
+        android:id="@+id/studyHistory_BarChart"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1" />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+       >
+
+        <Button
+            android:id="@+id/studyHistory_btn_show_values"
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:text="@string/word_history_display_process"
+            android:layout_marginLeft="90dp"
+            style="?android:attr/borderlessButtonStyle"
+            android:background="@drawable/seeker_button_bg_selector3"/>
+
+        <Button
+            android:id="@+id/studyHistory_btn_anim_xy"
+            android:layout_width="wrap_content"
+            android:layout_height="30dp"
+            android:text="@string/word_history_refresh"
+            android:layout_marginRight="90dp"
+            android:layout_alignParentEnd="true"
+            style="?android:attr/borderlessButtonStyle"
+            android:background="@drawable/seeker_button_bg_selector3"/>
+    </RelativeLayout>
+
+</LinearLayout>

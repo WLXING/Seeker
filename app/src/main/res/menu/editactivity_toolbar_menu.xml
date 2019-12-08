@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto">
+    <item
+        android:id="@+id/editactivity_reminder"
+        android:icon="@drawable/ic_new_task_reminder_time_unset"
+        android:title="闹钟"
+        app:showAsAction="always" />
+    <item
+        android:id="@+id/editactivity_pictures"
+        android:icon="@drawable/camera_statue"
+        android:title="图片"
+        app:showAsAction="always" />
+
+    <item
+        android:id="@+id/editactivity_grouping"
+        android:title="@string/activity_edit_group_management"
+        app:showAsAction="never">
+        <menu>
+            <group android:checkableBehavior="single">
+                <item
+                    android:id="@+id/editactivity_group_all"
+                    android:title="@string/activity_edit_all_notes"
+                    app:showAsAction="never" />
+                <item
+                    android:id="@+id/editactivity_group_work"
+                    android:title="@string/activity_edit_work_notes"
+                    app:showAsAction="never" />
+                <item
+                    android:id="@+id/editactivity_group_study"
+                    android:title="@string/activity_edit_study_notes"
+                    app:showAsAction="never" />
+                <item
+                    android:id="@+id/editactivity_group_life"
+                    android:title="@string/activity_edit_life_notes"
+                    app:showAsAction="never" />
+                <item
+                    android:id="@+id/editactivity_group_no"
+                    android:title="@string/activity_edit_no_group_notes"
+                    app:showAsAction="never" />
+            </group>
+        </menu>
+    </item>
+
+    <item
+        android:id="@+id/editactivity_fontBold"
+        android:title="粗体"
+        app:showAsAction="never">
+    </item>
+    <item
+        android:id="@+id/editactivity_fontItalic"
+        android:title="斜体"
+        app:showAsAction="never"></item>
+    <item
+        android:id="@+id/editactivity_fontUnderline"
+        android:title="下划线"
+        app:showAsAction="never"></item>
+    <item
+        android:id="@+id/editactivity_fontStrikethrough"
+        android:title="删除线"
+        app:showAsAction="never"></item>
+</menu>
